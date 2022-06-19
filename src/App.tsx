@@ -6,13 +6,13 @@ import Home from './pages/Home';
 import Quotes from './pages/Quotes';
 
 const App: Component = () => {
-  return <>
+  return <div id='theme' class="dark">
       <Header/>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/quotes' element={<Quotes />} />
       </Routes>
-    </>
+    </div>
   ;
 };
 

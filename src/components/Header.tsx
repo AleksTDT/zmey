@@ -1,5 +1,6 @@
 import { Component } from 'solid-js';
 import { NavLink } from 'solid-app-router';
+import ThemePicker from './ThemePicker';
 
 const Header: Component = () => {
     return (
@@ -10,6 +11,7 @@ const Header: Component = () => {
               <NavLink href='/' end>Вкъщи</NavLink>
               <NavLink href='/quotes'>JavaScript</NavLink>
             </nav>
+            <ThemePicker />
         </header>
     )
 }
