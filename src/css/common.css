@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#theme {
+    min-height: 100vh;
+    color: var(--text);
+    background: var(--bg);
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+}
+
+#theme > header {
+    min-height: 3rem;
+    width: 100%;
+    background: var(--bg-nav);
+    color: var(--text);
+}
