@@ -1,0 +1,35 @@
+a {
+    position: relative;
+    text-decoration: none;
+    color: var(--purple);
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    padding-bottom: 0.2em;
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        border-bottom: 4px solid var(--purple);
+        transition: 0.4s;
+    }
+
+    &:hover:after {
+        width: 100%;
+    }
+
+    &:hover {
+      color: var(--purple);
+    }
+  
+    &:not([href]):not([tabindex]) {
+      color: inherit;
+    }
+    &:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
+      color: inherit;
+    }
+    &:not([href]):not([tabindex]):focus {
+      outline: 0;
+    }
+  }

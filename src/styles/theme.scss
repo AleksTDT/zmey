@@ -11,6 +11,16 @@
     --yellow: #fff565;
 }
 
+.solar {
+    --gray0: #fbffd4;
+    --gray1: #f7f8d0;
+    --gray2: #b6f880;
+    --gray3: #5ec72d;
+    --gray4: #3ea565;
+    --gray5: #005368;
+    --gray6: #003d4c;
+}
+
 .light {
     --bg: var(--gray0);
     --bg-nav: linear-gradient(to right, var(--gray1), var(--gray3));
@@ -24,14 +34,3 @@
     --text: var(--gray0);
     --bg-solar: var(--blue);
 }
-
-.solar {
-    --gray0: #fbffd4;
-    --gray1: #f7f8d0;
-    --gray2: #b6f880;
-    --gray3: #5ec72d;
-    --gray4: #3ea565;
-    --gray5: #005368;
-    --gray6: #003d4c;
-}
-

@@ -1,44 +1,30 @@
 import { Component, onMount } from 'solid-js';
 
+import ZmSwitch from './ZmSwitch';
+
 let themeEl: HTMLElement | null;
 
-const onDark = () => {
-    themeEl!.classList.replace('light', 'dark');
-    localStorage.setItem('theme', 'dark');
-}
-const onLight = () => {
-    themeEl!.classList.replace('dark', 'light');
-    localStorage.setItem('theme', 'light');
-}
-const onSolar = () => {
-    if (themeEl!.classList.contains('solar')) {
-        themeEl!.classList.remove('solar');
-        themeEl!.classList.replace('isSolar', true.toString());
-    } else {
-        themeEl!.classList.add('solar');
-        themeEl!.classList.replace('isSolar', false.toString());
-    };
-}
-
-const setUpThemePicker = () => {
-    themeEl = document.getElementById('theme');
-    let theme = localStorage.getItem('theme');
-    let isSolar = localStorage.getItem('isSolar');
-
-    if (theme) {
-        themeEl!.classList.add(theme);
-        isSolar && themeEl!.classList.add('solar');
-    }
-}
-
 const ThemePicker: Component = () => {
-    onMount(() => setUpThemePicker())
 
-    return <>
-        <button onClick={onDark}>Dark</button>
-        <button onClick={onLight}>Light</button>
-        <button onClick={onSolar}>Solar</button>
-    </>
+    onMount(() => {
+        themeEl = document.getElementById('theme');
+    })
+
+    const onLight = (isLight: boolean) => {
+        themeEl!.classList.toggle('light');
+        themeEl!.classList.toggle('dark');
+        localStorage.setItem('isLight', isLight.toString());
+    }
+
+    const onSolar = (isSolar: boolean) => {
+        localStorage.setItem('isSolar', isSolar.toString());
+        themeEl!.classList.toggle('solar');
+    }
+
+    return <span class='theme-picker'>
+        <ZmSwitch checked={JSON.parse(localStorage.getItem('isLight') ?? 'false')} lableLeft='Dark' lableRight='Light' onChange={onLight} />
+        <ZmSwitch checked={JSON.parse(localStorage.getItem('isSolar') ?? 'false')} lableRight='Solar' onChange={onSolar} />
+    </span>
 }
 
 export default ThemePicker;
