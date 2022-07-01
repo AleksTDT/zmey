@@ -1,7 +1,7 @@
 a {
     position: relative;
     text-decoration: none;
-    color: var(--purple);
+    color: var(---magenta);
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
     padding-bottom: 0.2em;
@@ -11,7 +11,7 @@ a {
         bottom: 0;
         left: 0;
         width: 0%;
-        border-bottom: 4px solid var(--purple);
+        border-bottom: 4px solid var(--magenta);
         transition: 0.4s;
     }
 
@@ -20,7 +20,7 @@ a {
     }
 
     &:hover {
-      color: var(--purple);
+      color: var(--magenta);
     }
   
     &:not([href]):not([tabindex]) {

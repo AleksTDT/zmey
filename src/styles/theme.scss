@@ -1,14 +1,19 @@
 :root {
-    --gray0: #f8f8f8;
-    --gray1: #dbe1e8;
-    --gray2: #b2becd;
-    --gray3: #6c7983;
-    --gray4: #454e56;
-    --gray5: #2a2e35;
-    --gray6: #12181b;
-    --blue: #0084a5;
-    --purple: #a82dd1;
-    --yellow: #fff565;
+    --gray0: #fdf6e3;
+    --gray1: #eee8d5;
+    --gray2: #586e75;
+    --gray3: #93a1a1;
+    --gray4: #073642;
+    --gray5: #002b36;
+    --gray6: #657b83;
+    --yellow: #b58900;
+    --blue: #268bd2;
+    --orange: #cb4b16;
+    --red: #dc322f;
+    --magenta: #d33682;
+    --violet: #6c71c4;
+    --cyan: #2aa198;
+    --green: #859900;
 }
 
 .solar {
@@ -23,14 +28,18 @@
 
 .light {
     --bg: var(--gray0);
+    --bg-highlighted: var(--gray1);
     --bg-nav: linear-gradient(to right, var(--gray1), var(--gray3));
     --text: var(--gray6);
+    --comment: var(--gray3);
     --bg-solar: var(--yellow);
 }
 
 .dark {
     --bg: var(--gray5);
+    --bg-highlighted: var(--gray4);
     --bg-nav: linear-gradient(to right, var(--gray5), var(--gray6));
-    --text: var(--gray0);
+    --text: var(--gray3);
+    --comment: var(--gray2);
     --bg-solar: var(--blue);
 }
