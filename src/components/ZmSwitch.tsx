@@ -12,7 +12,7 @@ interface ZmSwitchProps {
 const ZmSwitch: Component<ZmSwitchProps> = (props: ZmSwitchProps) => {
     const id = `switch-${nextId++}`
 
-    const [selected, setSelected] = createSignal(false);
+    const [selected, setSelected] = createSignal(props.checked);
     const onChange = () => {
         setSelected(!selected());
         props.onChange(selected());
