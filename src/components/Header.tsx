@@ -9,7 +9,7 @@ const Header: Component = () => {
             <span>Змей</span>
             <nav>
               <NavLink href='/' end>Вкъщи</NavLink>
-              <NavLink href='/quotes'>JavaScript</NavLink>
+              <NavLink href='/article'>JavaScript</NavLink>
             </nav>
             <ThemePicker />
         </header>

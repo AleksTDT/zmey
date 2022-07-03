@@ -9,7 +9,7 @@ const ThemePicker: Component = () => {
     const [isSolar] = createSignal(JSON.parse(localStorage.getItem('isSolar') ?? 'false'));
 
     onMount(() => {
-        themeEl = document.getElementById('theme');
+        themeEl = document.getElementById('root');
         onLight(isLight());
         onSolar(isSolar());
     })
