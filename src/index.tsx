@@ -1,4 +1,4 @@
-import './assets/style.css';
+import './styles/style.scss';
 
 import App from './App';
 import { Router } from 'solid-app-router';
