@@ -1,4 +1,3 @@
-
 .quote {
     position: absolute;
     top: 1rem;
@@ -11,6 +10,10 @@
 }
 
 .theme-picker {
-    font-size: xx-small;
     display: flex;
+}
+
+.container {
+    width: min(100% - 2rem, 60rem);
+    margin-inline: auto;
 }

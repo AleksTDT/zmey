@@ -1,17 +1,35 @@
 @import './native-elements/links.scss';
 @import './native-elements/switch.scss';
 
-
 #root {
     min-height: 100vh;
     color: var(--text);
     background: var(--bg);
     transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 
-    > header {
-        min-height: 3rem;
+    >header {
         width: 100%;
-        background: var(--bg-nav);
-        color: var(--text);
+        padding: 0.5rem;
+        margin-bottom: 2rem;
+        border-bottom: solid var(--text) 1px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            font-size: larger;
+            display: flex;
+            align-items: center;
+            font-weight: bolder;
+
+            img {
+                height: 3rem;
+                margin-inline: 1rem;
+            }
+        }
+
+        >* {
+            margin-inline: 1rem;
+        }
     }
 }

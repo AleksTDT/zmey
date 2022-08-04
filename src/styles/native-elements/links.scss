@@ -3,8 +3,9 @@ a {
     text-decoration: none;
     color: var(---magenta);
     background-color: transparent;
-    -webkit-text-decoration-skip: objects;
     padding-bottom: 0.2em;
+    margin-inline: 0.5em;
+    
     &:after {
         content: '';
         position: absolute;
