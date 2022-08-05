@@ -1,12 +1,28 @@
 .quote {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    width: 15rem;
     background-color: var(--bg);
-    opacity: 0.7;
     padding: 1em;
-    border-left: solid 0.3em white;
+    border-top: solid 0.1em var(--violet);
+    border-bottom: solid 0.1em var(--violet);
+    font-weight: bolder;
+
+    svg {
+        height: 1.5em;
+        float: left;
+        margin: 0 1em 0 0;
+    }
+
+    footer {
+        margin-top: 1em;
+        font-style: italic;
+    }
+
+    .main-color {
+        stop-color: var(--violet);
+    }
+
+    .alt-color {
+        stop-color: var(--gray4);
+    }
 }
 
 .theme-picker {

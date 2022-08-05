@@ -1,6 +1,7 @@
 import { Component, createSignal } from "solid-js";
 
 import { allQuotes } from "../data/quotes";
+import { svgs } from "../assets/svgs";
 
 export interface Quote {
   quote: string;
@@ -16,13 +17,14 @@ const Quote: Component = () => {
     quoteId++;
     setQuote(allQuotes[quoteId % allQuotes.length]);
   };
-  setInterval(chageQuote, 4 * 1000);
+  setInterval(chageQuote, 40 * 1000);
 
   return (
-    <article class="quote">
+    <blockquote class="quote">
+      {svgs.quote}
       <p>{quote()[pickedLanguage].quote}</p>
-      <p>"{quote()[pickedLanguage].source}"</p>
-    </article>
+      <footer>"{quote()[pickedLanguage].source}"</footer>
+    </blockquote>
   );
 };
 
