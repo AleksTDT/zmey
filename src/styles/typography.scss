@@ -5,3 +5,7 @@ body {
     line-height: 1.2rem;
 }
 
+*::selection,
+* ::selection{
+    background: var(--bg-highlighted);
+}

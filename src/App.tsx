@@ -12,7 +12,8 @@ const App: Component = () => {
     <>
       <Header />
       <Quote />
-      <div class="container">
+      <div id="side-nav"></div>
+      <div id="route" class="container">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route

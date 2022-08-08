@@ -8,11 +8,11 @@
     transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 
     >header {
+        grid-area: header;
         width: 100%;
         padding: 0.5rem;
-        margin-bottom: 2rem;
-        border-bottom: solid var(--text) 1px;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
 

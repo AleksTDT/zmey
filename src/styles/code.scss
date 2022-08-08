@@ -1,21 +1,16 @@
-pre::selection,
-pre ::selection,
-code::selection,
-code ::selection {
-    background: var(--bg-highlighted);
-}
-
 pre {
-    padding: 0.5em;
+    padding: 1em;
     border-radius: 0.5em;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 .dark pre {
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(0,0,0,0.3);
 }
 
 .light pre {
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.3);
 }
 
 code[class*="language-"],
