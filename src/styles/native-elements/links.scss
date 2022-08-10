@@ -1,36 +1,29 @@
 a {
-    position: relative;
-    text-decoration: none;
-    color: var(---magenta);
-    background-color: transparent;
-    padding-bottom: 0.2em;
-    margin-inline: 0.5em;
-    
-    &:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0%;
-        border-bottom: 4px solid var(--magenta);
-        transition: 0.4s;
-    }
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: var(--text);
+  margin-inline: 0.5em;
+  border-bottom: 4px solid transparent;
 
-    &:hover:after {
-        width: 100%;
-    }
-
-    &:hover {
-      color: var(--magenta);
-    }
-  
-    &:not([href]):not([tabindex]) {
-      color: inherit;
-    }
-    &:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
-      color: inherit;
-    }
-    &:not([href]):not([tabindex]):focus {
-      outline: 0;
-    }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    border-bottom: 4px solid var(--magenta);
+    transition: 0.4s;
   }
+
+  &:hover:after {
+    width: 100%;
+  }
+
+  &:hover,
+  &.active {
+    color: var(--magenta);
+    border-bottom: 4px solid var(--magenta);
+    transition: 0.4s;
+  }
+}

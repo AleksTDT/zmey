@@ -1,11 +1,20 @@
-import { Component } from 'solid-js';
+import { Component, For } from "solid-js";
+import NavigationMenu, { Navigation } from "./NavigationMenu";
 
-const SideNavigation: Component = () => {
-    return (
-        <div>
-            <h2>SideNavigation</h2>
-        </div>
-    )
-}
+const SideNavigation: Component<Navigation[]> = (prop: Navigation[]) => {
+  return (
+    <>
+      <For each={prop}>
+        {(navigation) => (
+          <NavigationMenu
+            label={navigation.label}
+            path={navigation.path}
+            subPaths={navigation.subPaths}
+          ></NavigationMenu>
+        )}
+      </For>
+    </>
+  );
+};
 
 export default SideNavigation;
