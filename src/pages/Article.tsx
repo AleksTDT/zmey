@@ -23,31 +23,29 @@ export interface ArticleProps {
   subTopics: SubTopic[];
 }
 
-const Article: Component<ArticleProps> = (props: ArticleProps) => {
-  return (
-    <article>
-      <h2>{props.header}</h2>
-      <For each={props.subTopics}>
-        {(subTopic) => (
-          <>
-            <h3>{subTopic.header}</h3>
-            <For each={subTopic.data}>
-              {(data) => (
-                <>
-                  <Show when={data.type === "code"}>
-                    <CodeViewer code={data.value} />
-                  </Show>
-                  <Show when={data.type === "text"}>
-                    <p>{data.value}</p>
-                  </Show>
-                </>
-              )}
-            </For>
-          </>
-        )}
-      </For>
-    </article>
-  );
-};
+const Article: Component<ArticleProps> = (props: ArticleProps) => (
+  <article>
+    <h2>{props.header}</h2>
+    <For each={props.subTopics}>
+      {(subTopic) => (
+        <>
+          <h3>{subTopic.header}</h3>
+          <For each={subTopic.data}>
+            {(data) => (
+              <>
+                <Show when={data.type === "code"}>
+                  <CodeViewer code={data.value} />
+                </Show>
+                <Show when={data.type === "text"}>
+                  <p>{data.value}</p>
+                </Show>
+              </>
+            )}
+          </For>
+        </>
+      )}
+    </For>
+  </article>
+);
 
 export default Article;

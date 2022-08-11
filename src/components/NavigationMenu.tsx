@@ -5,7 +5,7 @@ import { NavLink } from "solid-app-router";
 export interface Navigation {
   label?: string;
   path?: string;
-  subPaths: Navigation[];
+  subPaths?: Navigation[];
 }
 
 const NavigationMenu: Component<Navigation> = (prop: Navigation) => {
@@ -15,11 +15,11 @@ const NavigationMenu: Component<Navigation> = (prop: Navigation) => {
   return (
     <div class={`accordion ${collapsed() ? "collapsed" : ""}`}>
       <Show when={showLink()}>
-        <NavLink href={`/${prop.path}`}>{prop.label} Link</NavLink>
+        <NavLink href={`/${prop.path}`}>{prop.label}</NavLink>
       </Show>
 
       <Show when={!showLink()}>
-        <span onClick={() => setCollapsed(!collapsed())}>{prop.label} Lab</span>
+        <span onClick={() => setCollapsed(!collapsed())}>{prop.label}</span>
         <div class="sub-menu">
           <For each={prop.subPaths}>
             {(subMenu) => (

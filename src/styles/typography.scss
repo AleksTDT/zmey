@@ -2,10 +2,15 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
-    line-height: 1.2rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
 }
 
 *::selection,
 * ::selection{
     background: var(--bg-highlighted);
+}
+
+p {
+    margin-block: 0.75em;
 }

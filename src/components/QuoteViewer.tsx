@@ -9,10 +9,9 @@ export interface Quote {
   tag?: string[];
 }
 
-const pickedLanguage = "bg";
-const Quote: Component = () => {
+const QuoteViewer: Component = () => {
   let quoteId = 0;
-  const [quote, setQuote] = createSignal(allQuotes[quoteId]);
+  const [quote, setQuote] = createSignal<Quote>(allQuotes[quoteId]);
   const chageQuote = () => {
     quoteId++;
     setQuote(allQuotes[quoteId % allQuotes.length]);
@@ -22,10 +21,10 @@ const Quote: Component = () => {
   return (
     <blockquote class="quote">
       {svgs.quote}
-      <p>{quote()[pickedLanguage].quote}</p>
-      <footer>"{quote()[pickedLanguage].source}"</footer>
+      <p>{quote().quote}</p>
+      <footer>"{quote().source}"</footer>
     </blockquote>
   );
 };
 
-export default Quote;
+export default QuoteViewer;

@@ -106,7 +106,7 @@
         grid-gap: 1rem;
         grid-template-areas:
             "header header header"
-            "side-nav route quote"
-            "side-nav route .";
+            "side-nav routes-outlet quote"
+            "side-nav routes-outlet .";
     }
 }
